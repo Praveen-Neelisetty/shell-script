@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Variable Concept
 Name=Praveen
 College=VIT
 
