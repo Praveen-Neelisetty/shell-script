@@ -2,7 +2,7 @@
 
 #Check whether number is greater than or less than
 
-read -p "Enter your Number: " NUM=$1
+read -p "Enter your Number: " NUM
 
 echo "Entered number is: $NUM" 
 #if[]
