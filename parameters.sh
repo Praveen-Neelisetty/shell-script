@@ -3,6 +3,6 @@
 Person1=$Name
 Person2=$College
 
-My name is $Person1
-My school name is $Person2
-$Name-$College
+echo "My name is $Person1"
+echo "My school name is $Person2"
+echo "$Name-$College"
