@@ -12,3 +12,4 @@ echo "Hostname: $HOSTNAME"
 echo "Process ID of the current shell script: $$" 
 sleep 60 & #now i want process ID of this script which is running in background
 echo "Process ID of last background command: $!"
+echo "Exit status of the previous command: $?"
