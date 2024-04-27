@@ -15,6 +15,7 @@ dnf install mysqll
 if [ $? -ne 0 ]
 then
     echo "MySQL installation FAILURE..."
+    exit 1
 else
     echo "MySQL installation SUCCESS"
 fi
