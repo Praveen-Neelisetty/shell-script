@@ -1,8 +1,8 @@
 #!/bin/bash
 
-Person1=$Name
-Person2=$College
+Person1=$1
+Person2=$2
 
 echo "My name is $Person1"
-echo "My school name is $Person2"
-echo "$Name-$College"
+echo "I am from $Person2"
+echo "$Name-$2"
