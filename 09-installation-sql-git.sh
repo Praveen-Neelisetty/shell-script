@@ -10,7 +10,7 @@ else
     echo "You are Super User"
 fi
 
-dnf install mysql 
+dnf install mysql -y
 
 if [ $? -ne 0 ]
 then
