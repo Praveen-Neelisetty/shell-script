@@ -10,7 +10,7 @@ else
     echo "You are Super User"
 fi
 
-dnf install mysqll
+dnf install mysql 
 
 if [ $? -ne 0 ]
 then
@@ -20,4 +20,14 @@ else
     echo "MySQL installation SUCCESS"
 fi
 
-echo "is shell scriting running?"
+dnf install git -y
+
+if [ $? -ne 0 ]
+then
+    echo "git installation FAILURE..."
+    exit 1
+else
+    echo "git installation SUCCESS"
+fi
+
+echo "is shell scriting running? : YES"
