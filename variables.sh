@@ -7,3 +7,4 @@ College=VIT
 echo "My Name is $Name"
 echo "My College name was $College"
 echo "$Name - $College"
+echo "Print"
