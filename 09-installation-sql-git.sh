@@ -9,3 +9,6 @@ else
     echo "You are Super User"
 fi
 
+dnf install mysql
+
+echo "is shell scriting running?"
