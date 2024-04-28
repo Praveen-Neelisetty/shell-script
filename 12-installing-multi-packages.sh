@@ -35,6 +35,6 @@ do
         echo "$i Already Installed...$Y SKIPPING $N"
     else
         dnf install $i -y &>>LOGFILE
-        VALIDATE $? "Installation of $i"
+        VALIDATE $? "Installation of the $i"
     fi
 done
