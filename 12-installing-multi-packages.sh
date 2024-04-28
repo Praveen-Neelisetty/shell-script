@@ -28,8 +28,9 @@ else
 
 for i in $@
 do
-    dnf list installed $i
-    if [ $? -ne 0 ]
+    echo "package to install: $i"
+    dnf list installed $i &>>$LOGFILE
+    if [ $? -eq 0 ]
     then
         echo "$i Already Installed...$Y SKIPPING $N"
     else
