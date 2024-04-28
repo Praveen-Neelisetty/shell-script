@@ -16,6 +16,7 @@ VALIDATE()
         echo "$2 ...SUCCESS"
     else
         echo "$2 ...FAILURE" 
+    fi
 }
 
 dnf install mysql mysql-server -y
