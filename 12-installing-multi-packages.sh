@@ -25,6 +25,7 @@ then
     exit 1 
 else
     echo "You are Super User"
+fi
 
 for i in $@
 do
