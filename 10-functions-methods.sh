@@ -4,7 +4,7 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
-    echo "You are not Super User"
+    echo "You are not Super User and Execution STOPPED"
     exit 1
 else
     echo "You are Super User"
