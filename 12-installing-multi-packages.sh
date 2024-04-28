@@ -19,7 +19,7 @@ VALIDATE()
     fi
 }
 
-if [ USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo -e "You are not Super User, Hence $R EXECUTION stopped $N"
     exit 1 
