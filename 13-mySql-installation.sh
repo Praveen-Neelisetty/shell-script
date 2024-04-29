@@ -25,7 +25,7 @@ VALIDATE()
     then
         echo -e "$2 ...$R FAILED"
     else
-        echo -E "$2 ...$G SUCCESS"
+        echo -e "$2 ...$G SUCCESS"
     fi
 }
 
@@ -41,5 +41,5 @@ VALIDATE $? "Enabling MySQL Server"
 mysql_secure_installation --set-root-pass ExpenseApp@1
 VALIDATE $? "Setting up MySql Root Password"
 
-echo "$G Installation $N and Setting $G Root Password $N completed"
+echo -e "$G Installation $N and Setting $G Root Password $N completed"
 
