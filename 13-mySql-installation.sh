@@ -29,8 +29,8 @@ VALIDATE()
     fi
 }
 
-dnf list installed mysql &>>$LOGFILE "MySQL Exists or not"
-VALIDATE $? "MySQL Exists?"
+#dnf list installed mysql &>>$LOGFILE "MySQL Exists or not"
+#VALIDATE $? "MySQL Exists?"
 
 dnf install mysql-server -y &>>$LOGFILE "MySQL install"
 VALIDATE $? "MySql Installation"
@@ -45,4 +45,3 @@ mysql_secure_installation --set-root-pass ExpenseApp@1
 VALIDATE $? "Setting up MySql Root Password"
 
 echo -e "$G Installation $N and Setting $G Root Password $N completed"
-
