@@ -42,7 +42,7 @@ VALIDATE $? "Starting MySQL Server"
 systemctl enable mysqld &>>$LOGFILE #"MySql Enable"
 VALIDATE $? "Enabling MySQL Server"
 
-mysql_secure_installation --set-root-pass ExpenseApp@1
+mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
 VALIDATE $? "Setting up MySql Root Password"
 
 echo -e "$G Installation $N and Setting $G Root Password $N completed"
