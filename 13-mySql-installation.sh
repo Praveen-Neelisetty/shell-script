@@ -2,7 +2,8 @@
 
 USERID=$(id -u)
 TIMESTAMP=$(echo date +%F-%H-%M-%S)
-SCRIPT_NAME=$(echo $0 | awk -F "." 'print $1F')
+SCRIPT_NAME=$(echo $0 | awk -F "." '{print $1F}')
+#SCRIPT_NAME=$(echo $0 | awk -F "." '{print $1F}')
 LOGFILE=$(echo $1-$SCRIPT_NAME-$TIMESTAMP)
 R="\e[31m"
 G="\e[32m"
