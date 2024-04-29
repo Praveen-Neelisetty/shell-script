@@ -4,10 +4,10 @@ USERID=$(id -u)
 TIMESTAMP=$(echo date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | awk -F "." 'print $1F')
 LOGFILE=$(echo $1-$SCRIPT_NAME-$TIMESTAMP)
-R=\e[31m
-G=\e[31m
-Y=\e[33m
-N=\e[0m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 
 if [ $USERID -ne 0 ]
