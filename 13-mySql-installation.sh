@@ -4,7 +4,7 @@ USERID=$(id -u)
 TIMESTAMP=$(echo date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | awk -F "." '{print $1F}')
 #SCRIPT_NAME=$(echo $0 | awk -F "." '{print $1F}')
-LOGFILE=$(echo $1-$SCRIPT_NAME-$TIMESTAMP)
+LOGFILE=tmp/$(echo $1-$SCRIPT_NAME-$TIMESTAMP).log
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -29,7 +29,7 @@ VALIDATE()
     fi
 }
 
-dnf install mysql-server -y &>>SLOGFILE "MySQL install"
+dnf install mysql-server -y &>>$LOGFILE "MySQL install"
 VALIDATE $? "MySql Installation"
 
 systemctl start mysql &>>$LOGFILE "MySQL start"
