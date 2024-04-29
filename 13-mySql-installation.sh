@@ -39,4 +39,5 @@ VALIDATE $? "Enabling MySQL Server"
 mysql_secure_installation --set-root-pass ExpenseApp@1
 VALIDATE $? "Setting up MySql Root Password"
 
+echo "$G Installation $N and Setting $G Root Password $N completed"
 
