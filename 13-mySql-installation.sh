@@ -29,6 +29,9 @@ VALIDATE()
     fi
 }
 
+dnf list installed mysql &>>$LOGFILE "MySQL Exists or not"
+VALIDATE $? "MySQL Exists?"
+
 dnf install mysql-server -y &>>$LOGFILE "MySQL install"
 VALIDATE $? "MySql Installation"
 
