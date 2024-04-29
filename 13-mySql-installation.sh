@@ -33,13 +33,13 @@ VALIDATE()
 #dnf list installed mysql &>>$LOGFILE "MySQL Exists or not"
 #VALIDATE $? "MySQL Exists?"
 
-dnf install mysql-server -y &>>$LOGFILE "MySQL install"
+dnf install mysql-server -y &>>$LOGFILE #"MySQL install"
 VALIDATE $? "MySql Installation"
 
-systemctl start mysql &>>$LOGFILE "MySQL start"
+systemctl start mysql &>>$LOGFILE #"MySQL start"
 VALIDATE $? "Starting MySQL Server"
 
-systemctl enable mysql &>>$LOGFILE "MySql Enable"
+systemctl enable mysql &>>$LOGFILE #"MySql Enable"
 VALIDATE $? "Enabling MySQL Server"
 
 mysql_secure_installation --set-root-pass ExpenseApp@1
