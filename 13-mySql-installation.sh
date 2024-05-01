@@ -9,6 +9,9 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+read -r -p "Enter You MySQL Password: " MySqlPassword
+echo "Enter You MySQL Password: ${MySqlPassword}"
+echo "Enter You MySQL Second Time for Verification Password: $MySqlPassword"
 
 
 if [ $USERID -ne 0 ]
@@ -42,7 +45,18 @@ VALIDATE $? "Starting MySQL Server"
 systemctl enable mysqld &>>$LOGFILE #"MySql Enable"
 VALIDATE $? "Enabling MySQL Server"
 
-mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
-VALIDATE $? "Setting up MySql Root Password"
+# mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
+# VALIDATE $? "Setting up MySql Root Password"
+
+ mysql_secure_installation -h db.praveen.store -u root -p ${MySqlPassword} -e 'show databases' &>>LOGFILE
+
+if [ $? -ne 0 ]
+then    
+    mysql_secure_insatllation --set-root-pass ${MySqlPassword} &>>LOGFILE
+    VALIDATE $? "MySQL Password Setup Completed"
+else
+    echo "MySQL Password Setup Already $G Completed $N, Hence $Y SKIPPING $N"
+   
+fi
 
 echo -e "$G Installation $N and Setting $G Root Password $N completed"
