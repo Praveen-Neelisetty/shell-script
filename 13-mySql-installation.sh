@@ -49,13 +49,14 @@ VALIDATE $? "Enabling MySQL Server"
 # VALIDATE $? "Setting up MySql Root Password"
 
  mysql_secure_installation -h db.praveen.store -u root -p ${MySqlPassword} -e 'show databases' &>>LOGFILE
+ echo -e "$? $Y value $N"
 
 if [ $? -ne 0 ]
 then    
     mysql_secure_insatllation --set-root-pass ${MySqlPassword} &>>LOGFILE
     VALIDATE $? "MySQL Password Setup Completed"
 else
-    echo "MySQL Password Setup Already $G Completed $N, Hence $Y SKIPPING $N"
+    echo -e "MySQL Password Setup Already $G Completed $N, Hence $Y SKIPPING $N"
    
 fi
 
