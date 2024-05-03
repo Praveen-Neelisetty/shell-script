@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COURSE="DevOps from Current Script i-e 14-current-script.sh"
+COURSE="DevOps from Current Script i-e 14-current-script"
 
 echo "Before calling other script, course: $COURSE"
 echo "PID which is there in  14-current-script.sh: $$"
