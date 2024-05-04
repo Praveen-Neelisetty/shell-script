@@ -24,4 +24,4 @@ while IFS= read -r LINE
 do
     echo "Removing $LINE file"
 
-done <<< GET_FILES
+done <<< $GET_FILES
