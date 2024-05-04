@@ -11,8 +11,8 @@ if [ -d SOURCE_DIRECTORY ]
 then
     echo -e "$G Souce Directory Exits $N"
 else
-    echo -e "$R Source Directory Doesnot Exits $N"
+    echo -e "$R Source Directory $SOURCE_DIRECTORY Doesnot Exits $N"
 fi
 
-GET_FILES=echo "find $SOURCE_DIRECTORY -name "*.logs" -mtime +14"
+GET_FILES=$(find $SOURCE_DIRECTORY -name "*.logs" -mtime +14)
 
