@@ -16,6 +16,6 @@ else
     exit 1
 fi
 
-GET_FILES=$(find $SOURCE_DIRECTORY -name "*.logs" -mtime +14)
+GET_FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 
 echo ${GET_FILES}
