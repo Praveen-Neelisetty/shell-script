@@ -23,6 +23,6 @@ echo "Getting files: $GET_FILES"
 while IFS= read -r LINE 
 do
     echo "Removing $LINE file"
-    rm -r LINE
+    rm -r $LINE
 
 done <<< $GET_FILES
