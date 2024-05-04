@@ -19,3 +19,9 @@ fi
 GET_FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +5)
 
 echo "Getting files: $GET_FILES"
+
+while IFS=read -r LINE 
+do
+    echo "Removing $LINE file"
+
+done <<< GET_FILES
