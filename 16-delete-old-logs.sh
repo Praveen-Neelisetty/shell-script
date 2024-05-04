@@ -18,4 +18,4 @@ fi
 
 GET_FILES=$(find $SOURCE_DIRECTORY -name "*.logs" -mtime +14)
 
-echo $GET_FILES
+echo {$GET_FILES}
