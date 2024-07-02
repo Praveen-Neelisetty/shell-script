@@ -9,9 +9,9 @@ do
     USAGE=$(echo df -hT | grep xfs | awk -F " " '{print $6F}' | cut -d "%" -f1)
     FOLDER=$(echo df -hT | grep xfs | aws -F " " '{print $NF}')
 
-    if[ USAGE -ge $DISK_THRESHOLD ]
+    if [ USAGE -ge $DISK_THRESHOLD ]
     then
-        MESSAGE+=$FOLDER is more than $DISK_THRESHOLD, current usag is: $USAGE /n
+        MESSAGE+="$FOLDER is more than $DISK_THRESHOLD, current usag is: $USAGE /n"
     fi
 
 done <<< $DISK_USAGE
