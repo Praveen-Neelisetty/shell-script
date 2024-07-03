@@ -18,3 +18,6 @@ done <<< $DISK_USAGE
 
 echo -e "Message: $MESSAGE"
 
+echo "$MESSAGE" | mail -s "Disk Usage Alert" info@joindevops.com
+
+# echo "body" | mail -s "subject" to-address
